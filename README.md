@@ -1,6 +1,20 @@
 Hi, I have created this Hapi JS and typescript scaffolding. If you are using Hapi JS for some real world application you should try this framework
 This is my official starter kit which has been tested in our production and passed all the scalability, performance and reliability expectations.
 
+## What currently supports?
+
+This starter kit comes with the following features:
+
+- **Swagger-UI**
+- **Status Monitor**
+- **.env files support**
+- **nodemon for hot-reload**
+- **Pretty Console Logger with Winston**
+- **PM2 with configuration file for deploying on servers**
+- **Inbuilt cron hosting module**
+- **Postgres Connection with Sequelize**
+- **Redis Connection**
+
 # Hapi JS Project Setup
 
 ## Requirements
@@ -49,3 +63,10 @@ This configuration is used in case if you want to debug your project using VScod
     ]
 }
 ```
+## Issues
+
+If you found a bug, or you have an answer, or whatever. Please, raise an [issue](https://github.com/abbey007/hapijs-boiler-plate/issues/new).
+
+## Contributing
+
+Of course, if you see something that you want to upgrade from this library, or a bug that needs to be solved, PRs are welcome!

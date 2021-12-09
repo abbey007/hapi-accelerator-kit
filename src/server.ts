@@ -1,10 +1,11 @@
-import * as Hapi from '@hapi/hapi';
+import Hapi from '@hapi/hapi';
 import Logger from './helper/logger';
 import Plugin from './plugin';
 import Router from './router';
 import Connection from './connection';
-import * as DotEnv from 'dotenv';
-import Cron from './crons';
+import DotEnv from 'dotenv';
+
+// import Cron from './crons';
 
 export default class Server {
   private static _instance: Hapi.Server;
@@ -27,9 +28,7 @@ export default class Server {
           }
         }
       });
-
-      Server._instance.validator(require('@hapi/joi'));
-
+      
       await Plugin.registerAll(Server._instance);
       await Router.loadRoutes(Server._instance);
       await Connection.loadInstanceConnections(Server._instance);

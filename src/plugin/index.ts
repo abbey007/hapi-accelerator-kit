@@ -50,6 +50,7 @@ export default class Plugins {
   ): Promise<void> {
     Logger.debug('registering: ' + JSON.stringify(plugin));
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     return new Promise((resolve, reject) => {
       server.register(plugin);
       resolve();

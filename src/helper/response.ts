@@ -1,15 +1,14 @@
 import * as Boom from '@hapi/boom';
-import * as Hapi from '@hapi/hapi';
 import * as Dotenv from 'dotenv';
 
 Dotenv.config();
 
 
-interface IResponseMeta {
-  operation?: string;
-  method?: string;
-  paging?: string | null;
-}
+// interface IResponseMeta {
+//   operation?: string;
+//   method?: string;
+//   paging?: string | null;
+// }
 
 interface IResponseError {
   code?: string | number;

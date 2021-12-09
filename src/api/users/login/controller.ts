@@ -18,7 +18,7 @@ export default class LoginController {
           value: userResponse,
         })
       );
-    } catch (error) {
+    } catch (error: any) {
       Logger.error(`Error in src/api/users/login/controller.ts - Method: loginUser - ${error}`);
       return toolkit.response(
         newResponse({

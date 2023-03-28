@@ -22,11 +22,12 @@ export const connection = new Sequelize(`${process.env.DATABASE}`, "null", "null
 
 export class CheckDbConnection {
   public async register(server: Hapi.Server): Promise<any> {
+    Logger.info(`Register ${server}`);
     return new Promise<void>((resolve, reject) => {
       connection
         .authenticate()
         .then((data: any) => {
-          Logger.info(`Connecting Database : Connection has been established successfully.`);
+          Logger.info(`Connecting Database : Connection has been established successfully. ${data}`);
           resolve();
         })
         .catch((err: any) => {

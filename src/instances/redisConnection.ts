@@ -1,8 +1,7 @@
-import * as Hapi from '@hapi/hapi';
+import Hapi from '@hapi/hapi';
 import Logger from './../helper/logger';
-import * as Dotenv from 'dotenv';
-import * as Redis from 'redis';
-import * as IORedis from 'ioredis';
+import Dotenv from 'dotenv';
+import IORedis from 'ioredis';
 
 Dotenv.config();
 
@@ -22,6 +21,7 @@ client.on('error', (err: any) => {
 export const redisConnection = client;
 
 export class CheckRedisConnection {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public async register(server: Hapi.Server): Promise<any> {
     return new Promise<void>((resolve, reject) => {
       if (client.status === "ready" || client.status === "connect" || client.status === "connecting") {

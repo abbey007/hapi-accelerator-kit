@@ -1,12 +1,9 @@
-import * as _ from 'lodash';
-import { Request, ResponseToolkit } from '@hapi/hapi';
 import * as Boom from '@hapi/boom';
 import * as Hapi from '@hapi/hapi';
 import newResponse from '../../../helper/response';
 import Logger from '../../../helper/logger';
-import validator from './validator';
-import { generateError, generateSuccess } from '../../../helper/generateResponse';
-import UserConfig from '../config';
+
+import { generateSuccess } from '../../../helper/generateResponse';
 
 export default class LoginController {
 
@@ -18,7 +15,7 @@ export default class LoginController {
           value: userResponse,
         })
       );
-    } catch (error) {
+    } catch (error: any) {
       Logger.error(`Error in src/api/users/login/controller.ts - Method: loginUser - ${error}`);
       return toolkit.response(
         newResponse({

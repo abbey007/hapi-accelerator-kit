@@ -8,7 +8,7 @@ export const generateError = (data: any, errorCode: any = 400) => {
     };
 };
 
-export const generateSuccess = (message: string = "", data: any = {}, successCode: any = 200) => {
+export const generateSuccess = (message = "", data: any = {}, successCode: any = 200) => {
 
     return {
         code: successCode,
